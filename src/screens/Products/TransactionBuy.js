@@ -9,6 +9,7 @@ export default function TransactionBuy() {
 
    const token = useSelector(state => state.auth.token)
    const [transactions, setTransactions] = useState([])
+   // hehe
 
    useFocusEffect(
       useCallback(() => {
