@@ -6,7 +6,7 @@ import {
    Container, Header, Content, Card, CardItem, List, ListItem,
    Thumbnail, Text, Button, Icon, Left, Body, Right, Lest
 } from 'native-base';
-import axios from '../../config/api'
+import axios, {app_link} from '../../config/api'
 import {dim} from '../../styles'
 
 export default function DetailProduct({route}) {
@@ -30,7 +30,7 @@ export default function DetailProduct({route}) {
          <ScrollView>
             <View style={{flex: 1}} >
                <Image
-                  source={{uri : `http://localhost:2020/product/picture/${product.picture}?unq=${new Date()}` }}
+                  source={{uri : `${app_link}/product/picture/${product.picture}?unq=${new Date()}` }}
                   style={{width: '100%', height: dim.fullHeight * 0.5}}
                />
                <View style={{marginHorizontal: 7}} >

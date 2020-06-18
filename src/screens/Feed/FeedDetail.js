@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react'
 import { useSelector }  from 'react-redux'
 import { useFocusEffect } from '@react-navigation/native'
-import axios from '../../config/api'
+import axios, {app_link} from '../../config/api'
 import { View, Image, Alert, ScrollView, TextInput, StyleSheet } from 'react-native'
 import { 
    Container, Header, Content, Card, CardItem, List, ListItem,
@@ -44,7 +44,7 @@ export default function FeedDetail({route}) {
          <ScrollView>
             <View style={{flex: 1}} >
                <Image
-                  source={{uri : `http://localhost:2020/product/picture/${product.picture}?unq=${new Date()}` }}
+                  source={{uri : `${app_link}/product/picture/${product.picture}?unq=${new Date()}` }}
                   style={{width: '100%', height: dim.fullHeight * 0.5}}
                />
                <View style={{marginHorizontal: 7}} >

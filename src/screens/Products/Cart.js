@@ -3,7 +3,7 @@ import { useFocusEffect, NavigationHelpersContext } from '@react-navigation/nati
 import { View, Alert } from 'react-native'
 import { useSelector } from 'react-redux'
 import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
-import axios from '../../config/api'
+import axios, {app_link} from '../../config/api'
 
 export default function Cart({navigation}) {
 
@@ -45,7 +45,7 @@ export default function Cart({navigation}) {
                   <ListItem key={cart.id} thumbnail>
                      <Left>
                         <Thumbnail square source={{
-                           uri : `http://localhost:2020/product/picture/${cart.picture}?unq=${new Date()}`
+                           uri : `${app_link}/product/picture/${cart.picture}?unq=${new Date()}`
                         }} />
                      </Left>
                      <Body>

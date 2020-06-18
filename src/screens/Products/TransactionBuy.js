@@ -25,7 +25,7 @@ export default function TransactionBuy() {
          return <Text style={{width: '100%', textAlign: 'center', fontWeight: "bold", marginTop: 20}} >No Transactions</Text>
       }
 
-      return transactions.map(trx => (
+      return transactions.map((trx, idx) => (
          <ListItem key={trx.id} thumbnail>
             <Body>
                <Text> Total Amount :  {trx.total_amount} </Text>

@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+export const api_link = "https://rn-commerce-api.herokuapp.com"
+
 export default axios.create({
    
-   baseURL: 'http://localhost:2020'
+   baseURL: 'https://rn-commerce-api.herokuapp.com'
    
 });

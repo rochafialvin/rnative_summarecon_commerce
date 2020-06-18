@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react'
 import { useSelector }  from 'react-redux'
 import { useFocusEffect } from '@react-navigation/native'
-import axios from '../../config/api'
+import axios, {add_link, api_link} from '../../config/api'
 import { View, FlatList, TouchableOpacity, Image, Alert } from 'react-native'
 import { 
    Container, Header, Content, Card, CardItem, Thumbnail,
@@ -14,7 +14,7 @@ const FeedProduct = ({item, navigation}) => (
             <CardItem>
             <Left>
                <Thumbnail source={{
-                  uri: `http://localhost:2020/user/avatar/${item.usrAvatar}?unq=${new Date()}`}} />
+                  uri: `${api_link}/user/avatar/${item.usrAvatar}?unq=${new Date()}`}} />
                <Body>
                   <Text>{item.usrName} </Text>
                   <Text note>Jakarta</Text>
@@ -23,7 +23,7 @@ const FeedProduct = ({item, navigation}) => (
             </CardItem>
             <CardItem cardBody>
                <Image source={{
-                  uri: `http://localhost:2020/product/picture/${item.picture}?unq=${new Date()}`}} style={{height: 200, width: null, flex: 1}}/>
+                  uri: `${api_link}/product/picture/${item.picture}?unq=${new Date()}`}} style={{height: 200, width: null, flex: 1}}/>
             </CardItem>
             <CardItem>
                <View>
